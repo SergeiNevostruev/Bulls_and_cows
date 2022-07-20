@@ -1,0 +1,20 @@
+{
+  "name": "bulls_and_cows",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "Nevostruev Sergei",
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10",
+    "terminal-kit": "^2.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
