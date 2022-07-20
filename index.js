@@ -48,7 +48,7 @@ const numChange = (cpuNum, callback, attempt) => {
         } (${truePos.join(", ")})\n`,
       };
     }
-    callback(result, numChange, attempt, cpuNum);
+    callback(result, numChange, attempt - 1, cpuNum);
   });
 };
 
@@ -56,6 +56,7 @@ const callbackChange = (result, callbackNumChange, attempt, cpuNum) => {
   if (result.change || attempt === 0) {
     terminal.cyan(result.message);
     terminal.red.bold(`Игра окончена, правильное число ${cpuNum}.\n`);
+    process.exit(0);
   } else {
     terminal.cyan(result.message);
     return callbackNumChange(cpuNum, callbackChange, attempt - 1);
